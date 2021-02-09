@@ -1,3 +1,3 @@
-#Functions and nested loops
+#Functions-and-nested-loops
 
 Lets Learn about functons
