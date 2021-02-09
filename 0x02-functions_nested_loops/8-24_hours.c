@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *print_last_digit - gives the absulute value of a number
+ *jack_bauer - gives the ours from 00:00 to 23:59
  *
  * Return: nothing
  */
