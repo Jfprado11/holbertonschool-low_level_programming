@@ -1,14 +1,14 @@
 #include "holberton.h"
 
 /**
- *_isupper - Tells if the characters are uppercase
+ *_isdigit - Tells if the characters are uppercase
  *@c: the variable that tells the char from a to z
  *
  *Return: 1 is upper. 0 otherwise
  */
-int _isupper(int c)
+int _isdigit(int c)
 {
-	if (c >= 'A' && c <= 'Z')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}
