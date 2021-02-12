@@ -11,17 +11,20 @@ int main(void)
 
 	for (a = 1; a <= 100; a++)
 	{
-		if (a % 3 == 0 && a % 5 == 0)
+		int b = a % 3;
+		int c = a % 5;
+
+		if (b == 0 && c == 0)
 		{
 			printf("FizzBuzz");
 			putchar(' ');
 		}
-		else if (a % 3 == 0)
+		else if (b == 0)
 		{
 			printf("Fizz");
 			putchar(' ');
 		}
-		else if (a % 5 == 0)
+		else if (c == 0)
 		{
 			printf("Buzz");
 			putchar(' ');
