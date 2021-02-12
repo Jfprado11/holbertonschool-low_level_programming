@@ -13,8 +13,9 @@ int main(void)
 	{
 		int b = a % 3;
 		int c = a % 5;
+		int d = a % 15;
 
-		if (b == 0 && c == 0)
+		if (d == 0)
 		{
 			printf("FizzBuzz");
 			putchar(' ');
