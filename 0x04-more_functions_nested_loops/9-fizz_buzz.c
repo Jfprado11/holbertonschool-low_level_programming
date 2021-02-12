@@ -11,7 +11,7 @@ int main(void)
 
 	for (a = 1; a <= 100; a++)
 	{
-		if (a % 15 == 0)
+		if (a % 3 == 0 && a % 5 == 0)
 		{
 			printf("FizzBuzz ");
 		}
@@ -21,7 +21,10 @@ int main(void)
 		}
 		else if (a % 5 == 0)
 		{
+			if (a < 99)
 			printf("Buzz ");
+			else
+				printf("Buzz");
 		}
 		else
 		{
