@@ -6,8 +6,6 @@
  *
  *Return: len the length of the string
  */
-int _strlen(char *s);
-
 void print_rev(char *s)
 {
 	int i, l;
