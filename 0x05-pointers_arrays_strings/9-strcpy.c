@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *_strccpy - a function to copy a string to another
+ *_strcpy - a function to copy a string to another
  *@dest: varibel where the destiniton is going
  *@src: varible source of the destinition
  *
@@ -18,5 +18,5 @@ char *_strcpy(char *dest, char *src)
 		src++;
 	}
 	*dest = '\0';
-	return aux;
+	return (aux);
 }
