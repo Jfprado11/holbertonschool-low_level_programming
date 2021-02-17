@@ -14,9 +14,9 @@ void puts_half(char *str)
 	{
 		l++;
 	}
-	if (l % 2 == 1)
+	if (l % 2 != 1)
 	{
-		a = (l - 1) / 2;
+		a = (l + 1) / 2;
 	}
 	else
 	{
