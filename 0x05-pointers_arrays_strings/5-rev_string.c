@@ -17,7 +17,7 @@ void rev_string(char *s)
 	{
 		l++;
 	}
-	l = l -1;
+	i = l -1;
 	for (l--, i = 0; i < l / 2; i++, l--)
 	{
 		aux = s[l];
