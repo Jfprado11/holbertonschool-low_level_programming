@@ -1,2 +1,2 @@
-#more_Loops_arrays_pointers
+# more_Loops_arrays_pointers
 working with more pointers
