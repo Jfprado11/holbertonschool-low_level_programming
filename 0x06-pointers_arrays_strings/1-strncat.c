@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- *_strNcat - a function to concanate two strings
+ *_strncat - a function to concanate two strings
  *@dest: variable to destinetion
  *@src: variable sorce
  *@n: varible of bites
