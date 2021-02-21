@@ -16,7 +16,7 @@ char *rot13(char *m)
 		{
 			m[a] = m[a] + 13;
 		}
-		else if ((m[a] >= 'n' && m[a] <= 'z') || (m[a] >= 'N' && m[a] <= 'Z'))
+		else
 		{
 			m[a] = m[a] - 13;
 		}
