@@ -1,4 +1,4 @@
-#Even_more_pointers
-*pointers
-*arrays
-*strings
+# Even more pointers
+* pointers
+* arrays
+* strings
