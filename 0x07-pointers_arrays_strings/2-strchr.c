@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- *_memcpy - fill memory with a constat byte
- *@dest: destinition of the data memory to be copied
- *@src: source of the memory
- *@n: copies the first bytes
+ *_strchr - fill memory with a constat byte
+ *@s: string to be read
+ *@c: letter to pe input
  *
  *Return: a pointer with the value
  */
