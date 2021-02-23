@@ -13,34 +13,21 @@ char *_strstr(char *haystack, char *needle)
 	{
 		return ('\0');
 	}
-	while (*haystack != '\0')
+	while (*haystack)
 	{
-		if (*haystack == *needle && cmp(haystack, needle))
+		char *b = haystack;
+		char *p = needle;
+
+		while (*haystack && *p && *haystack == *p)
 		{
-			return (haystack);
+			haystack++;
+			p++;
 		}
-		haystack++;
+		if (!*p)
+		{
+			return (b);
+		}
+		haystack = b + 1;
 	}
 	return ('\0');
-}
-
-/**
-*cmp - function to compare two strings
-*@x: string to be compare
-*@y: string to be compare
-*
-*Return: a pointer with the value
-*/
-int cmp(char *x, char *y)
-{
-	while (*x && *y)
-	{
-		if (*x != *y)
-		{
-			return (0);
-		}
-		x++;
-		y++;
-	}
-	return (*y == '\0');
 }
