@@ -3,7 +3,7 @@
 /**
  *set_string - function that points to another
  *@s: pointer from
- *@to: pointer to 
+ *@to: pointer to
  *
  *return: nothing
  */
