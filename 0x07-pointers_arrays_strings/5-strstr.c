@@ -9,6 +9,10 @@ int cmp(char *x, char *y);
  */
 char *_strstr(char *haystack, char *needle)
 {
+	if (haystack == '\0' || needle == '\0')
+	{
+		return ('\0');
+	}
 	while (*haystack != '\0')
 	{
 		if (*haystack == *needle && cmp(haystack, needle))
