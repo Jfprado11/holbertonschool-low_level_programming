@@ -19,8 +19,8 @@ int _sqrt_recursion(int n)
 }
 /**
  *_root - calcule the squere root
- *@a: base number
- *@b: power number
+ *@a: square root
+ *@b: squere number
  *
  *Return: the square root number
  */
@@ -34,5 +34,5 @@ int _root(int a, int b)
 	{
 		return (-1);
 	}
-	return (_root(a, b + 1))
+	return (_root(a, b + 1));
 }
