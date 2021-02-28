@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
 			mul = mul * atoi(argv[a]);
 		}
 		printf("%d\n", mul);
+		return (0);
 	}
 	if (argc == 1)
 	{
