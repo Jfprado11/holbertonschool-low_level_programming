@@ -12,11 +12,11 @@
 int main(int argc, char *argv[])
 {
 	int a;
-	int mul = 1;
+	int mul;
 
 	for (a = 1; a < argc; a++)
 	{
-		mul *= atoi(argv[a]);
+		mul = atoi(argv[1]) * atoi(argv[2]);
 	}
 	if (argc > 1)
 	{
