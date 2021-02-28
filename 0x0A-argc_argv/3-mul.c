@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	{
 		for (a = 1; a < argc; a++)
 		{
-			mul = atol(argv[1]) * atol(argv[2]);
+			mul = atoi(argv[1]) * atoi(argv[2]);
 		}
 		printf("%d\n", mul);
 	}
