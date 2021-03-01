@@ -23,17 +23,17 @@ int main(int argc, char *argv[])
 	{
 		for (a = 1; a < argc; a++)
 		{
-			if (isdigit(*argv[a]))
-			{
-				plus += atoi(argv[a]);
-			}
 			if (isdigit(*argv[a]) == 0)
 			{
 				printf("Error\n");
 				return (1);
 			}
+			else
+			{
+				plus += atoi(argv[a]);
+			}
 		}
-		printf("%d\n", plus);
 	}
+	printf("%d\n", plus);
 	return (0);
 }
