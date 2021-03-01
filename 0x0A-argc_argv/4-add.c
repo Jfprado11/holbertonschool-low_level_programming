@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 			{
 				plus += atoi(argv[a]);
 			}
-			if (!isdigit(*argv[a]))
+			if (isdigit(*argv[a]) == 0)
 			{
 				printf("Error\n");
 				return (1);
