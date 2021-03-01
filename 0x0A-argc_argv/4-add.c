@@ -14,22 +14,29 @@ int main(int argc, char *argv[])
 {
 	int a, i;
 	int plus = 0;
-
-	for (a = 1; a < argc; a++)
+	
+	if (argc <= 1)
 	{
-		for (i = 0; argv[a][i]; i++)
+		printf("0\n");
+	}
+	if (argc > 1)
+	{
+		for (a = 1; a < argc; a++)
 		{
-			if (isdigit(argv[a][i]) == 0)
+			for (i = 0; argv[a][i]; i++)
 			{
-				printf("Error\n");
-				return (1);
+				if (isdigit(argv[a][i]) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
 		}
+		for (a = 1; a < argc; a++)
+		{
+			plus += atoi(argv[a]);
+		}
+		printf("%d\n", plus);
 	}
-	for (a = 1; a < argc; a++)
-	{
-		plus += atoi(argv[a]);
-	}
-	printf("%d\n", plus);
 	return (0);
 }
