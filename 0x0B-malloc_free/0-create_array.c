@@ -2,10 +2,11 @@
 #include "holberton.h"
 
 /**
+ *create_array - a funtion that a creates an array
+ *@size: vairble that tells the amount needed in the heap
+ *@c: variable with the new information
  *
- *
- *
- *
+ *Return: a pointer
  */
 char *create_array(unsigned int size, char c)
 {
@@ -17,7 +18,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	p = malloc(sizeof(char) * size);
-	for (a = 0; a < size; a++)
+	for (a = 1; a < size; a++)
 	{
 		p[a] = c;
 	}
