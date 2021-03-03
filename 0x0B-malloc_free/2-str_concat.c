@@ -12,6 +12,7 @@ int _strlen(char *s);
 char *str_concat(char *s1, char *s2)
 {
 	char *cat;
+	int a, b, c;
 	int i = 0;
 
 	if (s1 == NULL)
@@ -22,7 +23,10 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (0);
 	}
-	cat = malloc(sizeof(char) * _strlen(s1) + _strlen(s2) + 2);
+	a = _strlen(s1);
+	b = _strlen(s2);
+	c = a + b +2;
+	cat = malloc(c);
 	if (cat == NULL)
 	{
 		return (NULL);
