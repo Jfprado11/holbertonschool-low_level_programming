@@ -3,17 +3,18 @@
 
 int _strlen(char *s);
 /**
- *_strdup - returns a pointer to a newly allocated space in memory an copied
- *@str: the string that we copied
+ *str_concat - function to concanate two strngs
+ *@s1: first string
+ *@s2: second string
  *
- *Return: a pointer
+ *Return: a string concanated
  */
 char *str_concat(char *s1, char *s2)
 {
 	char *cat;
 	int i = 0;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 	{
 		return (NULL);
 	}
