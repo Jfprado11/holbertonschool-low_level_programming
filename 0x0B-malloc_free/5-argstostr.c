@@ -15,11 +15,19 @@ char *argstostr(int ac, char **av)
 	int len = 0;
 	char *astr;
 
+	if (ac == 0 || av == 0)
+	{
+		return (0);
+	}
 	for (i = 0; i < ac; i++)
 	{
 		len += _strlen(av[i]);
 	}
 	astr = malloc(sizeof(char) * (len + 1));
+	if (astr == 0)
+	{
+		return (0);
+	}
 
 	for (j = 0; j < ac; j++)
 	{
