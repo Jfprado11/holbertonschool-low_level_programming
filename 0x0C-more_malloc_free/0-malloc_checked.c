@@ -5,7 +5,7 @@
  *malloc_checked - a function that allocates memory using malloc
  *@b: the size of the memory we need
  *
- *Return: 
+ *Return: memory location
  */
 void *malloc_checked(unsigned int b)
 {
@@ -17,5 +17,5 @@ void *malloc_checked(unsigned int b)
 	{
 		exit(98);
 	}
-	return(loc);
+	return (loc);
 }
