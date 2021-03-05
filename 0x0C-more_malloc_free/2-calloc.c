@@ -18,9 +18,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 	loc = (void *)malloc(nmemb * size);
-	if (loc == 0)
+	if (loc == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	for (a = 0; a <= (nmemb * size); a++)
 	{
