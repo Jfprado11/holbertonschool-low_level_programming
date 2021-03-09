@@ -1,7 +1,7 @@
 #include "dog.h"
 
 /**
- *innit_dog - initializate the variable
+ *init_dog - initializate the variable
  *@d: structure name
  *@name: name of dog
  *@age: age of the dog
