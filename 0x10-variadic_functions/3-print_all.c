@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 	};
 	int a = 0, b;
 	va_list ag;
-	char *f , *j;
+	char *f, *j;
 
 	f = "";
 	j = ", ";
@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 	while (format[a] != '\0')
 	{
 		b = 0;
-		while(vars[b].ty != NULL)
+		while (vars[b].ty != NULL)
 		{
 			if (format[a] == vars[b].ty[0])
 			{
