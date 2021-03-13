@@ -86,12 +86,12 @@ void _float(va_list f)
  */
 void _string(va_list s)
 {
-	char * z;
+	char *z;
 
 	z = va_arg(s, char *);
-	if (z != NULL)
+	if (z == NULL)
 	{
-		printf("%s", z);
+		z = "(nil)";
 	}
-	printf("(nil)");
+	printf("%s", z);
 }
