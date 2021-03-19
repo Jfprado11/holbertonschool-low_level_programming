@@ -13,6 +13,7 @@ int _strlen(char *s);
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *beg_node = NULL;
+	list_t *add = NULL;
 
 	beg_node = malloc(sizeof(list_t));
 	if (beg_node == NULL)
@@ -23,7 +24,8 @@ list_t *add_node(list_t **head, const char *str)
 	beg_node->len = _strlen(beg_node->str);
 	beg_node->next = (*head);
 	(*head) = beg_node;
-	return (&(*beg_node));
+	add = beg_node;
+	return (add);
 }
 
 /**
