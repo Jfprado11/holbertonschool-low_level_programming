@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <string.h>
 
-int _strlen(char *s);
+int _strlen(const char *s);
 /**
  *add_node - adds a node at begging of the list
  *@head: the head of list
@@ -20,10 +20,10 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 	beg_node->str = strdup(str);
-	beg_node->len = _strlen(beg_node->str);
-	beg_node->next = *head;
-	*head = beg_node;
-	return (*head);
+	beg_node->len = _strlen(str);
+	beg_node->next = (*head);
+	(*head) = beg_node;
+	return (beg_node);
 }
 
 /**
@@ -32,7 +32,7 @@ list_t *add_node(list_t **head, const char *str)
  *
  *Return: len the length of the string
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int lon = 0;
 
