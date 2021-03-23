@@ -1,10 +1,11 @@
 #include "lists.h"
 
 /**
- * 
- * 
- * 
- * 
+ *add_nodeint_end - creates a node at end of the list
+ *@head: the head of the ;ist
+ *@n: the data
+ *
+ *Return: the address of the head
  */
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
