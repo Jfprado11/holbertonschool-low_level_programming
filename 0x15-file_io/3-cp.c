@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-int cp_file(char *file_from, char *file_to);
+void cp_file(char *file_from, char *file_to);
 /**
  *main - main function
  *@ac: the number of arguments
@@ -31,7 +31,7 @@ int main(int ac, char **av)
  *
  *Return: 1 in success
  */
-int cp_file(char *file_from, char *file_to)
+void cp_file(char *file_from, char *file_to)
 {
 	int fd, check1, fd2;
 	char buffer[1024];
@@ -71,5 +71,4 @@ int cp_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
-	return (1);
 }
