@@ -53,11 +53,13 @@ void cp_file(char *file_from, char *file_to)
 	{
 		if (check1 == -1)
 		{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
-		exit(99);
+			close(fd), close(fd2);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			exit(98);
 		}
 		if (write(fd2, buffer, check1) != check1)
 		{
+			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 			exit(99);
 		}
