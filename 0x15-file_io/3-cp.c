@@ -15,6 +15,11 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(98);
 	}
+	if (av[1] == NULL)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
+	}
 	cp_file(av[1], av[2]);
 	return (0);
 }
@@ -54,7 +59,12 @@ int cp_file(char *file_from, char *file_to)
 			exit(99);
 		}
 	}
-	if (close(fd) == -1 || close(fd2) == -1)
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
+		exit(100);
+	}
+	if (close(fd2) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
 		exit(100);
