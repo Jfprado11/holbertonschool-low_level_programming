@@ -21,7 +21,7 @@ int main(int ac, char **av)
 		exit(98);
 	}
 	cp_file(av[1], av[2]);
-	return (1);
+	return (0);
 }
 
 /**
