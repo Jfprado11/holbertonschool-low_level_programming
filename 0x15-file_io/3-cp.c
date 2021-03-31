@@ -36,12 +36,14 @@ int cp_file(char *file_from, char *file_to)
 	int fd, check1, fd2;
 	char buffer[1024];
 
-	if ((fd = open(file_from, O_RDONLY)) == -1)
+	fd = open(file_from, O_RDONLY);
+	if (fd == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
-	if ((fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664)) == -1)
+	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fd2 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 		exit(99);
