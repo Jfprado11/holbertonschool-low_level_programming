@@ -27,7 +27,7 @@ int main(int ac, char **av)
  */
 void cp_file(char *file_from, char *file_to)
 {
-	int fd, check1, fd2;
+	int fd, check1, fd2, i = 0;
 	char buffer[1024];
 
 	fd = open(file_from, O_RDONLY);
@@ -56,6 +56,11 @@ void cp_file(char *file_from, char *file_to)
 			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 			exit(99);
+		}
+		while (i < 1024)
+		{
+			buffer[i] = '\0';
+			i++;
 		}
 	}
 	if (close(fd) == -1)
