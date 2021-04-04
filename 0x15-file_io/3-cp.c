@@ -51,7 +51,7 @@ void cp_file(char *file_from, char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 			exit(98);
 		}
-		if (write(fd2, buffer, check1) != check1)
+		if (write(fd2, buffer, check1) == -1)
 		{
 			close(fd2);
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
