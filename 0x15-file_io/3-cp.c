@@ -12,7 +12,7 @@ int main(int ac, char **av)
 	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(98);
+		exit(97);
 	}
 	cp_file(av[1], av[2]);
 	return (0);
