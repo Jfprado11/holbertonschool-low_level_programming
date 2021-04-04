@@ -53,8 +53,8 @@ void cp_file(char *file_from, char *file_to)
 		}
 		if (write(fd2, buffer, check1) == -1)
 		{
-			close(fd2);
-			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+			close(fd2), close(fd);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 		while (i < 1024)
