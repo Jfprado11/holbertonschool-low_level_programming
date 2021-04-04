@@ -43,7 +43,7 @@ void cp_file(char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
-	while ((check1 = read(fd, buffer, 1024)) > 0)
+	while ((check1 = read(fd, buffer, 1022)) > 0)
 	{
 		if (check1 == -1)
 		{
@@ -57,7 +57,7 @@ void cp_file(char *file_from, char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
-		while (i < 1024)
+		while (i <= 1024)
 		{
 			buffer[i] = '\0';
 			i++;
