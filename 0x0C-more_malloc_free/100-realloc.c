@@ -1,7 +1,8 @@
 #include "holberton.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 char *_memcpy(char *dest, char *src, unsigned int n);
+
 /**
  *_realloc - allocates a new memory previous allocated
  *@ptr: the pointer to be new allocated
@@ -17,7 +18,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	{
 		return (ptr);
 	}
-	if (new_size == 0)
+	if (new_size == 0 && ptr)
 	{
 		free(ptr);
 		return (NULL);
