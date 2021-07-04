@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""a module that resolves an algorithm"""
+
+
 def island_perimeter(grid):
+    """returns the perimeter of a grid"""
     count = 0
     lists = len(grid)
     single = len(grid[0])
